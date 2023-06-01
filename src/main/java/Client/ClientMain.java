@@ -15,7 +15,8 @@ public class ClientMain {
 
     public static void main(String[] args) {
 
-        try {
+        try
+        {
             Scanner scanner = new Scanner(System.in);
             Socket socket = new Socket("localhost", 4321);
             InputStream inputStream = socket.getInputStream();
@@ -24,16 +25,21 @@ public class ClientMain {
             PrintWriter printWriter = new PrintWriter(outputStream, true);
             String response;
 
-            while ((response = bufferedReader.readLine()) != null) {
-                if (!response.equals("null")) {
+            while ((response = bufferedReader.readLine()) != null)
+            {
+                if (!response.equals("null"))
+                {
                     String request = Request.createRequest(new JSONObject(response), scanner);
                     JSONObject jsonObject = new JSONObject(request);
                     printWriter.println(request);
-                    if (jsonRequest.getString("type").equals("download")) {
+                    if (jsonRequest.getString("type").equals("download"))
+                    {
                         recieveFile(socket, jsonRequest.getString("id"));
                     }
                 }
             }
+
+
 
 
         }

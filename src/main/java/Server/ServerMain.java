@@ -45,7 +45,7 @@ public class ServerMain {
     private Connection connectSQL() throws SQLException
     {
         String url = "jdbc:mysql://localhost:3306/steam";
-        String user = "mysql";
+        String user = "root";
         String pass = "Driver28";
         Connection connection = DriverManager.getConnection(url , user , pass);
         System.out.println("connected to database");
