@@ -190,9 +190,9 @@ public class Response
 
         String id = request.getString("id");
         FileChannel src = new FileInputStream(
-                "D:\\Eighth-Assignment-Steam\\src\\main\\java\\Server\\Resources\\" + id + ".png").getChannel();
+                "C:\\Users\\ASUS\\Desktop\\java code\\Eighth-Assignment-Steam\\src\\main\\java\\Server\\Resources" + id + ".png").getChannel();
 
-        File folder = new File("D:\\Eighth-Assignment-Steam\\src\\main\\java\\Client\\Downloads\\");
+        File folder = new File("C:\\Users\\ASUS\\Desktop\\java code\\Eighth-Assignment-Steam\\src\\main\\java\\Client\\Downloads\\");
         File[] listOfFiles = folder.listFiles();
         ArrayList<String> fileNames = new ArrayList<>();
 

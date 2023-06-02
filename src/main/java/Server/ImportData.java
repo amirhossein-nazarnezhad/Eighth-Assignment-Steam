@@ -9,17 +9,17 @@ import java.util.Scanner;
 public class ImportData {
 
     public static void importTextFiles(){
-        String url = "jdbc:postgresql://localhost:5432/steam";
-        String user = "postgres";
-        String pass = "12345";
+        String url = "jdbc:mysql://localhost:3306/steam";
+        String user = "root";
+        String pass = "Driver28";
 
         try {
             Connection connection = DriverManager.getConnection(url, user, pass);
-            System.out.println("Connected to the PostgreSQL database!");
+            System.out.println("Connected to the database!");
 
             Statement statement = connection.createStatement();
 
-            File folder = new File("D:\\Eighth-Assignment-Steam\\src\\main\\java\\Server\\Resources");
+            File folder = new File("C:\\Users\\ASUS\\Desktop\\java code\\Eighth-Assignment-Steam\\src\\main\\java\\Server\\Resources");
             File[] listOfFiles = folder.listFiles();
 
             for (File file : listOfFiles) {
